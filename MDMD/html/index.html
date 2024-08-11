@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You can tell me</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="../html/css/estilo.css">
+</head>
+<body>
+
+        <main>
+
+            <div class="contenedor__todo">
+                <div class="caja__trasera">
+                    <div class="caja__trasera-login">
+                        <h3>¿Ya tienes una cuenta?</h3>
+                        <p>Inicia sesión para entrar en la página</p>
+                        <button id="btn__iniciar-sesion">Iniciar Sesión</button>
+                    </div>
+                    <div class="caja__trasera-register">
+                        <h3>¿Aún no tienes una cuenta?</h3>
+                        <p>Regístrate para que puedas iniciar sesión</p>
+                        <button id="btn__registrarse">Regístrarse</button>
+                    </div>
+                </div>
+
+                <!--Formulario de Login y registro-->
+                <div class="contenedor__login-register">
+                    <!--Login-->
+            
+                    <form action="xd.html" class="formulario__login" id="loginForm">
+                        <h2>Iniciar Sesión</h2>
+                        <input type="text" placeholder="Correo Electrónico" id="email">
+                        <input type="password" placeholder="Contraseña" id="password">
+                        <button type="submit">Entrar</button>
+                    </form>
+                
+                    <script>
+                        document.getElementById('loginForm').addEventListener('submit', function(event) {
+                            var email = document.getElementById('email').value;
+                            var password = document.getElementById('password').value;
+                
+                            if (email === '' || password === '') {
+                                alert('Por favor complete todos los campos');
+                                event.preventDefault();
+                            }
+                        });
+                    </script>
+
+                    <!--Register-->
+                    <form action="xd.html" class="formulario__register" id="registerForm">
+                        <h2>Regístrarse</h2>
+                        <input type="text" placeholder="Nombre completo" id="fullName">
+                        <input type="text" placeholder="Correo Electrónico" id="registerEmail">
+                        <input type="text" placeholder="Usuario" id="username">
+                        <input type="password" placeholder="Contraseña" id="registerPassword">
+                        <button type="submit">Regístrarse</button>
+                    </form>
+                    
+                    <script>
+                        document.getElementById('registerForm').addEventListener('submit', function(event) {
+                            var fullName = document.getElementById('fullName').value.trim();
+                            var email = document.getElementById('registerEmail').value.trim();
+                            var username = document.getElementById('username').value.trim();
+                            var password = document.getElementById('registerPassword').value.trim();
+                
+                            if (fullName === '' || email === '' || username === '' || password === '') {
+                                alert('Por favor complete todos los campos');
+                                event.preventDefault();
+                            }
+                        });
+                    </script>
+                </div>
+            </div>
+
+        </main>
+
+        <script src="../html/js/script.js"></script>
+</body>
+</html> 

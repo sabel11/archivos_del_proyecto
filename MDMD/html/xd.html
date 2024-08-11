@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>You can tell me</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/9b8103ef2f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="encabezado" id="inicio">
+        <div class="contenido-navegacion">
+            <div class="logo">
+                <h2>You can <span> tell me</span></h2>
+            </div>
+
+            <nav class="navegacion ocultar">
+                <a href="#inicio">Inicio</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#contacto">Contacto</a>
+                <a href="Nosotros.html">Nosotros</a>
+            </nav>
+            <div class="hamburguesa">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+
+        <div class="contenido-encabezado contenedor">
+            <div class="texto-encabezado">
+                <h1>Apoyo Psicológico para Estudiantes</h1>
+            </div>
+
+            <form class="formulario-encabezado">
+                <h2>Agenda una cita con nosotros</h2>
+                <div class="input-encabezado">
+                    <input type="text" placeholder="Nombre">
+                </div>
+                <div class="input-encabezado">
+                    <input type="email" placeholder="Correo">
+                </div>
+                <div class="input-encabezado">
+                    <input type="tel" placeholder="Teléfono">
+                </div>
+
+                <div class="boton-encabezado">
+                    <input class="btn azul" type="submit" value="Agendar">
+                </div>
+            </form>
+        </div>
+    </header>
+
+    <div class="ventajas">
+        <div class="contenido-ventajas contenedor">
+            <div class="ventaja">
+                <i class="fas fa-smile"></i>
+                <h3>Atención Personalizada</h3>
+                <p>Brindamos apoyo psicológico adaptado a las necesidades específicas de cada estudiante.</p>
+            </div>
+            <div class="ventaja">
+                <i class="fas fa-brain"></i>
+                <h3>Técnicas Modernas</h3>
+                <p>Aplicamos métodos y técnicas actuales para ayudar a los estudiantes a superar sus desafíos.</p>
+            </div>
+            <div class="ventaja">
+                <i class="fas fa-user-shield"></i>
+                <h3>Confidencialidad</h3>
+                <p>Garantizamos la privacidad y seguridad de la información de nuestros estudiantes.</p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <section class="servicios contenedor" id="servicios">
+        <h2>Servicios</h2>
+        <div class="contenido-servicios">
+            <div class="servicio">
+                <i class="fas fa-user-friends"></i>
+                <h3>Terapia Individual</h3>
+                <p>Proporcionamos sesiones de terapia individual para estudiantes que buscan apoyo emocional y psicológico.</p>
+            </div>
+            <div class="servicio">
+                <i class="fas fa-child"></i>
+                <h3>Orientación Vocacional</h3>
+                <p>Ayudamos a los estudiantes a tomar decisiones informadas sobre su futuro académico y profesional.</p>
+            </div>
+            <div class="servicio">
+                <i class="fas fa-grin"></i>
+                <h3>Programas de Bienestar</h3>
+                <p>Ofrecemos programas de bienestar que incluyen talleres y actividades para mejorar la salud mental y emocional de los estudiantes.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contacto" id="contacto">
+        <div class="contenido-contacto">
+            <div class="informacion-contacto">
+                <h3>Dejanos tu mensaje o sugerencia</h3>
+                
+            </div>
+            <form class="formulario-contacto">
+                <div class="input-contacto">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" placeholder="Pedro Perez">
+                </div>
+                <div class="input-contacto">
+                    <label for="correo">Correo</label>
+                    <input type="email" id="correo" placeholder="example@example.com">
+                </div>
+                <div class="input-contacto">
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono" placeholder="0808080808">
+                </div>
+                <div class="input-contacto">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje"></textarea>
+                </div>
+                <div class="input-contacto">
+                    <input type="submit" value="Enviar" class="btn azul">
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="logo">
+            <h2>Psicología <span>Estudiantil</span></h2>
+        </div>
+        <p>Todos los derechos reservados <span class="fecha"></span> &copy; Desarrollo por MD</p>
+    </footer>
+    <script src="js/app.js"></script>
+</body>
+</html>
+
