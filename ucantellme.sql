@@ -1,34 +1,28 @@
-CREATE TABLE ´pacientes´(
-´id´ integuer PRIMARY KEY,
-´num_doc´ integuer,
-´nombre´ text,
-´edad´ integuer,
-´grado´ integuer,
-´grupo´ integuer,
-´correo´ text,
+CREATE TABLE ´estudiantes´ (
+    ´id´ INTEGER PRIMARY KEY,
+    ´num_doc´ INTEGER,
+    ´nombre´ TEXT,
+    ´edad´ INTEGER,
+    ´grado´ INTEGER,
+    ´grupo´ INTEGER,
+    ´correo´ TEXT
 );
---> statement-breakpoint
-CREATE TABLE ´psicologos´(
-´id´ integuer PRIMARY KEY,
-´num_doc´ integuer,
-´nombre´ text,
-´correo´ text,
+
+CREATE TABLE ´psicologos´ (
+    ´id´ INTEGER PRIMARY KEY,
+    ´num_doc´ INTEGER,
+    ´nombre´ TEXT,
+    ´correo´ TEXT
 );
---> statement-breakpoint
-CREATE TABLE ´citas_pendientes´(
-´id´ integuer PRIMARY KEY,
-´paciente_id´ integuer,
-´cumlida´ text,
-´psico_id´ integuer,
-FOREIGN KEY (´paciente_id´) REFERENCE ´pacientes´ (´id_pacientes´) 
-FOREIGN KEY (´psico´_id´) REFERENCE ´psicologos´ (´id_psico´)  
-);
---> statement-breakpoint
-CREATE TABLE ´citas´(
-´cita_id´ integuer ,
-´fecha´ integuer,
-´duracion´ integuer,
-´hora´ integuer,
-FOREIGN KEY (´cita_id´) REFERENCE ´citas_pendientes´(´id_citas´)  
- 
+
+CREATE TABLE ´citas´ (
+    ´cita_id´ INTEGER PRIMARY KEY,
+    ´fecha´ DATE,
+    ´duracion´ INTEGER,
+    ´hora´ TIME,
+    ´estado´ TEXT DEFAULT 'pendiente',  -- Campo para indicar si la cita está pendiente o confirmada
+    ´estudiante_id´ INTEGER,
+    ´psicologo_id´ INTEGER,
+    FOREIGN KEY (´estudiante_id´) REFERENCES ´estudiantes´(´id´),
+    FOREIGN KEY (´psicologo_id´) REFERENCES ´psicologos´(´id´)
 );
